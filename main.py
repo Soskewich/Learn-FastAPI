@@ -1,7 +1,6 @@
 from datetime import datetime
 from enum import Enum
 from typing import List, Optional
-
 from fastapi import FastAPI
 from pydantic.fields import Field
 from pydantic.main import BaseModel
@@ -47,7 +46,7 @@ fake_trades = [
 
 
 class Trade(BaseModel):
-    id:int
+    id: int
     user_id: int
     currency: str = Field(max_length=5)
     side: str
