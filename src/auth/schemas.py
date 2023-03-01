@@ -1,8 +1,9 @@
 from typing import Optional
 from fastapi_users import schemas
 
+
 class UserRead(schemas.BaseUser[int]):
-    id: id
+    id: int
     email: str
     username: str
     role_id: int
@@ -24,5 +25,3 @@ class UserCreate(schemas.BaseUserCreate):
     is_verified: Optional[bool] = False
 
 
-class UserUpdate(schemas.BaseUserUpdate):
-    pass
