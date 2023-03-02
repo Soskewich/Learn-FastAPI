@@ -13,7 +13,7 @@ router = APIRouter (
     prefix="/operations",
     tags=["Operation"]
 )
-#@cache(expire=30) - время хранения кэш в редис
+#@cache(expire=30) - время хранения кэша в редис
 @router.get("/long_operation")
 @cache(expire=30)
 def get_long_op():
